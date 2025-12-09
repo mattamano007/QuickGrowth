@@ -188,7 +188,7 @@ export default function Home() {
             <a href="#pricing">Pricing</a>
             <a href="#faq">FAQ</a>
             <button className="cta-button small">
-              <span>Book 30-min Assessment</span>
+              <span>Chat with us •</span>
             </button>
           </div>
         </div>
@@ -222,14 +222,14 @@ export default function Home() {
           <p className="hero-subtitle">
             Traditional consultants take 6 months and deliver a PowerPoint.
             <br />
-            We take 2 days and deliver deployed automations.
+            We take 2 days and deliver deployed AI automations.
           </p>
 
           <div className="hero-cta">
             <div className="cta-inline">
               <input className="cta-input" type="email" name="hero-email" placeholder="Work email" aria-label="Work email" />
               <button className="cta-button">
-                <span>Book 30-Min Assessment</span>
+                <span>Chat with us •</span>
               </button>
             </div>
             <p className="cta-subtext">$5K flat or outcome-based pricing</p>
@@ -562,11 +562,11 @@ export default function Home() {
                 </ul>
                 <div className="pricing-actions">
                   <input className="cta-input" type="email" name={`${tier.title}-email`} placeholder="Work email" aria-label="Work email" />
-                  <button className="cta-button">
-                    <span>Book 30-Min Assessment</span>
-                  </button>
-                </div>
-              </div>
+            <button className="cta-button">
+              <span>Chat with us •</span>
+            </button>
+          </div>
+        </div>
             ))}
           </div>
           <p className="section-subtitle small">No hidden fees. No monthly charges. No surprises.</p>

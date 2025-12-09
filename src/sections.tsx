@@ -98,8 +98,8 @@ const faq = [
 const metrics = ["400+ builds", "14-20 sprints/month", "Never issued a refund"];
 
 export const CTAButton = ({ small = false }: { small?: boolean }) => (
-  <button className={`cta ${small ? "small" : ""}`} aria-label="Book 30-minute assessment">
-    Book 30-min Assessment
+  <button className={`cta ${small ? "small" : ""}`} aria-label="Chat with us">
+    Chat with us •
   </button>
 );
 

@@ -283,6 +283,36 @@ a {
   flex-wrap: wrap;
 }
 
+.hero-cta .cta-inline {
+  gap: 0;
+  padding: 6px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 16px 46px rgba(0, 0, 0, 0.28);
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.hero-cta .cta-inline .cta-input {
+  min-width: 280px;
+  height: 58px;
+  padding: 0 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px 0 0 12px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.hero-cta .cta-inline .cta-button {
+  height: 58px;
+  padding: 0 32px;
+  border-radius: 0 12px 12px 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .cta-button {
   position: relative;
   padding: 20px 48px;
@@ -1769,12 +1799,22 @@ a {
   .cta-inline {
     flex-direction: column;
     align-items: stretch;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
   }
   .cta-inline .cta-button {
     width: 100%;
+    height: 54px;
+    border-radius: 12px;
   }
   .cta-inline .cta-input {
     width: 100%;
+    min-width: unset;
+    height: auto;
+    padding: 12px 14px;
+    border-radius: 12px;
   }
   .scroll-indicator {
     display: none;
