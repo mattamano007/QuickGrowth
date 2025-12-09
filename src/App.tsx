@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const solutionSteps = [
   {
     title: "Smart scoping",
-    blurb: "We align on the highest-impact automation and a measurable KPI.",
+    blurb: "We find your biggest bottleneck and agree on a KPI to prove it worked.",
     points: ["30-min assessment call", "Pick from proven automation menu", "Define owners and success metric"],
     visual: "radar",
   },
@@ -21,7 +21,7 @@ const solutionSteps = [
   },
   {
     title: "Optimize + verify",
-    blurb: "We track the KPI for 30 days and tune for lift before we call it done.",
+    blurb: "We track the KPI for 30 days and adjust until it hits the target.",
     points: ["Monitor impact", "Tweak prompts/flows", "Prove the KPI before handoff"],
     visual: "checklist",
   },
@@ -29,26 +29,26 @@ const solutionSteps = [
 
 const solutions = [
   {
-    title: "Automate repetitive tasks",
-    blurb: "AI workflows that take the manual steps off your team's plate and run on triggers you control.",
+    title: "Sales automation",
+    blurb: "Your SDRs spend 3 hours researching prospects. We automate it in 45 seconds.",
     tags: ["Automation", "AI assistants", "Workflows"],
     visual: "list",
   },
   {
-    title: "Delegate daily tasks",
-    blurb: "Inbox triage, QA checks, and summaries handled before your team starts their day.",
+    title: "Support automation",
+    blurb: "Your ops team triages 200 support tickets daily. We route them before coffee.",
     tags: ["Delegation", "Daily ops", "Productivity"],
     visual: "spinner",
   },
   {
     title: "Accelerate sales growth",
-    blurb: "Automatic research, enrichment, and outbound prep so reps stay in the conversation, not the CRM.",
+    blurb: "Your reps spend 3 hours researching each prospect. We do it in 30 seconds—so they can actually sell.",
     tags: ["Sales", "Enrichment", "Outbound"],
     visual: "table",
   },
   {
-    title: "Build smarter systems",
-    blurb: "Layer AI reasoning onto your stack: routing, scoring, and data sanity checks in one flow.",
+    title: "Data automation",
+    blurb: "Your team catches bad data after it breaks something. We catch it before it gets in—so nothing breaks.",
     tags: ["Systems", "Data quality", "Routing"],
     visual: "cards",
   },
@@ -59,23 +59,23 @@ const testimonials = [
     name: "James Carter",
     role: "CEO at TechFlow Solutions",
     quote:
-      "QuickGrowth transformed our operations by eliminating repetitive tasks and improving efficiency. Scaling our workflow has never been easier.",
-    stars: 5,
+      "We were paying a VA $3K/month to enter lead data. QuickGrowth automated it in 2 days. Now that VA handles customer calls instead.",
+          stars: 5,
     initials: "JC",
   },
   {
     name: "Sophia Martinez",
     role: "Operations Manager at NexaCorp",
     quote:
-      "With QuickGrowth, we cut manual work and improved accuracy. Our team now focuses on high-impact tasks while automation handles the rest.",
-    stars: 5,
+      "Our ops team spent 15 hours/week triaging tickets. Now it's done automatically before they clock in. Saved us a full headcount.",
+          stars: 5,
     initials: "SM",
   },
   {
     name: "David Reynolds",
     role: "Head of Sales at GrowthPeak",
     quote:
-      "QuickGrowth's insights doubled our sales efficiency. We now engage leads at the right time with smarter, data-backed decisions.",
+      "Our reps were researching prospects for 3+ hours daily. QuickGrowth cut that to zero. They're on twice as many calls now.",
     stars: 5,
     initials: "DR",
   },
@@ -210,7 +210,7 @@ export default function Home() {
         <div className="hero-content">
           <div className="eyebrow">
             <div className="pulse-dot" />
-            <span>Loved by operators shipping 14-20 sprints every month</span>
+            <span>Your competitors are already automating</span>
           </div>
 
           <h1 className="hero-title">
