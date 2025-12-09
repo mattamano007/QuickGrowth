@@ -2,26 +2,26 @@ import React, { useEffect, useState } from "react";
 
 const solutionSteps = [
   {
-    title: "Smart scoping",
-    blurb: "We find your biggest bottleneck and agree on a KPI to prove it worked.",
+    title: "Find the problem",
+    blurb: "We figure out what's slowing you down and how to measure success.",
     points: ["30-min assessment call", "Pick from proven automation menu", "Define owners and success metric"],
     visual: "radar",
   },
   {
-    title: "Build with playbooks",
+    title: "Build it fast",
     blurb: "We assemble and customize with components we've shipped dozens of times.",
     points: ["Connect to your stack", "Handle edge cases and alerts", "Ship a working draft in hours"],
     visual: "code",
   },
   {
-    title: "Launch + train",
-    blurb: "We deploy, test live, and train your team so it sticks.",
+    title: "Make it live",
+    blurb: "We turn it on, test it, and show your team how to use it.",
     points: ["Production deploy", "Team training session", "Dashboards for visibility"],
     visual: "integration",
   },
   {
-    title: "Optimize + verify",
-    blurb: "We track the KPI for 30 days and adjust until it hits the target.",
+    title: "Make sure it works",
+    blurb: "We watch it for 30 days and fix anything that needs fixing.",
     points: ["Monitor impact", "Tweak prompts/flows", "Prove the KPI before handoff"],
     visual: "checklist",
   },
@@ -38,7 +38,7 @@ const solutions = [
     title: "Support automation",
     blurb: "Your ops team triages 200 support tickets daily. We route them before coffee.",
     tags: ["Delegation", "Daily ops", "Productivity"],
-    visual: "spinner",
+    visual: "support",
   },
   {
     title: "Accelerate sales growth",
@@ -59,7 +59,7 @@ const testimonials = [
     name: "James Carter",
     role: "CEO at TechFlow Solutions",
     quote:
-      "We were paying a VA $3K/month to enter lead data. QuickGrowth automated it in 2 days. Now that VA handles customer calls instead.",
+      "We were paying a VA $3K/month to enter lead data. QuickGrowth automated it in 48 hours. Now that VA handles customer calls instead.",
           stars: 5,
     initials: "JC",
   },
@@ -91,21 +91,29 @@ const testimonials = [
 
 const pricing = [
   {
-    title: "Fixed Sprint",
-    price: "$5,000",
+    title: "48-hour automation",
     badge: "Most popular",
-    bullets: ["One automation", "2 days", "Clear scope"],
+    meta: "Ship a working automation this week.",
+    tone: "indigo",
+    bullets: ["One automation shipped in 2 days", "Scoped upfront, no surprises", "Includes training + 30-day monitoring"],
   },
   {
     title: "Outcome-based",
-    price: "Pay on results",
-    bullets: ["Agree on a KPI", "Build the automation", "You pay only if we hit it"],
+    meta: "Pay only on KPI success. Shared upside.",
+    tone: "teal",
+    bullets: ["Pay only if we hit the KPI", "Shared upside on revenue/time saved", "Same 48-hour build + 30-day monitoring"],
+  },
+  {
+    title: "Automation concierge",
+    meta: "Ongoing optimization and new automations monthly.",
+    tone: "amber",
+    bullets: ["Ongoing tweaks and new flows monthly", "Live monitoring + alerting", "Monthly strategy and backlog reviews"],
   },
 ];
 
 const faqs = [
   {
-    q: "How can you do in 2 days what consultants need 6 months for?",
+    q: "How can you do in 48 hours what consultants need 6 months for?",
     a: "We use proven playbooks. It's assembling tested parts, not inventing from scratch. We focus on the 80% that drives impact.",
   },
   {
@@ -113,7 +121,7 @@ const faqs = [
     a: "We see patterns. If you're truly unique, we'll tell you on the 30-min call and point you to the right path.",
   },
   {
-    q: "What happens after 2 days?",
+    q: "What happens after 48 hours?",
     a: "The automation is live. We monitor for 30 days and train your team. Most clients book another sprint once they see the ROI.",
   },
   {
@@ -187,8 +195,9 @@ export default function Home() {
           <div className="nav-links">
             <a href="#pricing">Pricing</a>
             <a href="#faq">FAQ</a>
+            <input className="cta-input" type="email" name="nav-email" placeholder="Work email" aria-label="Work email" />
             <button className="cta-button small">
-              <span>Chat with us •</span>
+              <span>Book a Call</span>
             </button>
           </div>
         </div>
@@ -214,25 +223,22 @@ export default function Home() {
           </div>
 
           <h1 className="hero-title">
-            <span className="line">2 days.</span>
-            <span className="line">Working system.</span>
-            <span className="line">Guaranteed results.</span>
+            <span className="line">Every business</span>
+            <span className="line">will automate.</span>
+            <span className="line">The winners are doing it now.</span>
           </h1>
 
           <p className="hero-subtitle">
-            Traditional consultants take 6 months and deliver a PowerPoint.
-            <br />
-            We take 2 days and deliver deployed AI automations.
+            We future-proof your business in 48 hours with AI automation most companies won't touch for 2 years.
           </p>
 
           <div className="hero-cta">
             <div className="cta-inline">
               <input className="cta-input" type="email" name="hero-email" placeholder="Work email" aria-label="Work email" />
               <button className="cta-button">
-                <span>Chat with us •</span>
+                <span>Book a Call</span>
               </button>
             </div>
-            <p className="cta-subtext">$5K flat or outcome-based pricing</p>
           </div>
         </div>
 
@@ -245,12 +251,10 @@ export default function Home() {
       <section className="problem-section">
         <div className="section-shell">
           <div className="section-label animate">THE PROBLEM</div>
-          <h2 className="section-title animate">You know you need AI automation.</h2>
-          <p className="section-subtitle">
-            Competitors are automating. Your boss is asking. Your team is drowning in repetitive work.
-          </p>
+          <h2 className="section-title animate">You've been thinking about AI for months.          </h2>
+
           <div className="spacer-line" aria-hidden="true" />
-          <p className="section-subtitle">But the options are broken:</p>
+          <p className="section-subtitle">But every option is broken:</p>
 
           <div className="problem-grid">
             <div className="problem-card animate">
@@ -262,7 +266,7 @@ export default function Home() {
                 </li>
                 <li>
                   <span className="problem-icon">📄</span>
-                  <span>You get a strategy deck and a bill.</span>
+                  <span>You get a deck and a bill.</span>
                 </li>
               </ul>
             </div>
@@ -272,11 +276,11 @@ export default function Home() {
               <ul className="problem-list">
                 <li>
                   <span className="problem-icon">🔍</span>
-                  <span>6 months to find talent.</span>
+                  <span>6 months to hire.</span>
                 </li>
                 <li>
                   <span className="problem-icon">💸</span>
-                  <span>$150K salary. Risk they build the wrong thing.</span>
+                  <span>$150K salary. They build the wrong thing.</span>
                 </li>
               </ul>
             </div>
@@ -286,7 +290,8 @@ export default function Home() {
               <ul className="problem-list">
                 <li>
                   <span className="problem-icon">❓</span>
-                  <span>Which automation first?</span>
+                  <span>Which tool? Which task first?
+                  </span>
                 </li>
                 <li>
                   <span className="problem-icon">⏳</span>
@@ -306,8 +311,9 @@ export default function Home() {
       <section className="solutions-section" id="work">
         <div className="section-shell">
           <div className="section-label animate">OUR SERVICES</div>
-          <h2 className="section-title animate">AI solutions that take your business to the next level.</h2>
-          <p className="section-subtitle">We design, develop, and implement automation tools that help you work smarter, not harder.</p>
+          <h2 className="section-title animate">AI solutions that take your business out of the stone age.</h2>
+          <p className="section-subtitle">We build automation that saves hours, cuts costs, and increases output.
+          </p>
 
           <div className="solutions-grid">
             {solutions.map((item, idx) => (
@@ -342,10 +348,10 @@ export default function Home() {
                         </div>
                       </div>
                     )}
-                    {item.visual === "spinner" && (
-                      <div className="spinner-wrap">
-                        <div className="spinner" />
-                        <p className="spinner-text">Work smarter, not harder.</p>
+                    {item.visual === "support" && (
+                      <div className="image-wrap">
+                        <img src="/support-static.svg" alt="Support tickets auto-routed to the right queues" className="solution-gif" />
+                        <p className="spinner-text">Tickets triaged and routed before coffee.</p>
                       </div>
                     )}
                     {item.visual === "table" && (
@@ -406,6 +412,11 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <div className="section-cta center">
+            <button className="cta-button">
+              <span>Book a Call</span>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -413,7 +424,7 @@ export default function Home() {
         <div className="section-shell">
           <div className="section-label animate">OUR PROCESS</div>
           <h2 className="section-title animate">Simple, fast, and scalable.</h2>
-          <p className="section-subtitle">We design, build, and optimize automations that ship in days—not months.</p>
+          <p className="section-subtitle">48 hours. 4 steps. Done.</p>
 
           <div className="process-grid">
             {solutionSteps.map((step, idx) => (
@@ -477,10 +488,11 @@ export default function Home() {
             ))}
           </div>
 
-          <p className="section-subtitle">
-            That's it. Working automation. 2 days. Not a strategy doc. Not a pilot plan. A deployed system that saves time or makes
-            money.
-          </p>
+          <div className="section-cta center">
+            <button className="cta-button">
+              <span>Book a Call</span>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -488,8 +500,8 @@ export default function Home() {
         <div className="section-shell">
           <div className="milestone-grid">
             <div className="milestone-card animate">
-              <div className="milestone-number">2</div>
-              <p className="milestone-copy">days to build and ship a working automation</p>
+              <div className="milestone-number">48</div>
+              <p className="milestone-copy">hours to build and ship a working automation</p>
             </div>
             <div className="milestone-card animate">
               <div className="milestone-number">400+</div>
@@ -505,11 +517,10 @@ export default function Home() {
 
       <section className="testimonials-section" id="testimonials">
         <div className="section-shell">
-          <div className="section-label pill">Testimonials</div>
           <h2 className="section-title">Why businesses love our AI automation.</h2>
           <h3 className="section-title closing-line animate">
             <span className="punchline-lines">
-              <span className="punchline-line">Why Businesses Love Our AI Solutions</span>
+              <span className="punchline-line">Why businesses love QuickGrowth.</span>
             </span>
           </h3>
           <div className="testimonials-grid">
@@ -536,10 +547,9 @@ export default function Home() {
         <div className="section-shell">
           <div className="section-label">ZERO RISK</div>
           <h2 className="section-title">Don't pay unless we add value.</h2>
-          <p className="section-subtitle">
-            Before we start, we agree on exactly what success looks like. A specific KPI. Time saved. Cost reduced. Revenue increased.
-          </p>
-          <p className="section-subtitle">We build in 2 days. We measure impact over 30 days. If we don't hit the KPI, you don't pay.</p>
+          <p className="section-subtitle">Your KPI. 48 hours to build. 30 days to prove it.</p>
+          <p className="section-subtitle">Don't hit it? Don't pay.</p>
+          <p className="section-subtitle">This is the AI frontier. You're early.</p>
           <div className="guarantee-highlight">We've never had to refund.</div>
         </div>
       </section>
@@ -547,29 +557,36 @@ export default function Home() {
       <section className="pricing-section" id="pricing">
         <div className="section-shell">
           <div className="section-label">PRICING</div>
-          <h2 className="section-title">Two options. Same 2-day sprint.</h2>
-          <p className="section-subtitle">Both include deployed system, training, and 30-day monitoring.</p>
+          <h2 className="section-title">Three Packages</h2>
+          <h3 className="section-title closing-line animate">
+            <span className="punchline-lines">
+              <span className="punchline-line">Three Packages</span>
+            </span>
+          </h3>
+          <p className="section-subtitle nowrap">You wouldn't fax a document in 2025. Why are you manually updating spreadsheets?</p>
           <div className="pricing-grid">
             {pricing.map((tier) => (
-              <div className="pricing-card animate" key={tier.title}>
+              <div className={`pricing-card animate ${tier.badge ? "featured" : ""}`.trim()} key={tier.title}>
+                <div className={`accent-bar ${tier.tone || ""}`.trim()} />
                 {tier.badge ? <div className="pricing-badge">{tier.badge}</div> : null}
                 <h3>{tier.title}</h3>
-                <p className="price">{tier.price}</p>
+                {tier.meta ? <p className="tier-meta">{tier.meta}</p> : null}
                 <ul>
                   {tier.bullets.map((b) => (
                     <li key={b}>{b}</li>
                   ))}
                 </ul>
-                <div className="pricing-actions">
-                  <input className="cta-input" type="email" name={`${tier.title}-email`} placeholder="Work email" aria-label="Work email" />
-            <button className="cta-button">
-              <span>Chat with us •</span>
-            </button>
-          </div>
-        </div>
+              </div>
             ))}
           </div>
-          <p className="section-subtitle small">No hidden fees. No monthly charges. No surprises.</p>
+          <div className="section-cta center">
+            <div className="cta-inline">
+              <input className="cta-input" type="email" name="pricing-email" placeholder="Work email" aria-label="Work email" />
+              <button className="cta-button">
+                <span>Book a Call</span>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -577,6 +594,11 @@ export default function Home() {
         <div className="section-shell">
           <div className="section-label pill">FAQs</div>
           <h2 className="section-title">Frequently asked questions</h2>
+          <h3 className="section-title closing-line animate">
+            <span className="punchline-lines">
+              <span className="punchline-line">FAQs</span>
+            </span>
+          </h3>
           <div className="faq-list">
             {faqs.map((item) => (
               <div className={`faq-item animate ${openFaq === faqs.indexOf(item) ? "open" : ""}`} key={item.q}>
@@ -599,7 +621,7 @@ export default function Home() {
 
       <section className="final-cta">
         <div className="section-shell">
-          <h2 className="section-title">Let AI do the Work so you can Scale Faster</h2>
+          <h2 className="section-title">Let AI do the work so you can scale faster</h2>
           <p className="section-subtitle final-cta-subtitle">Book a Call Today and Start Automating</p>
           <div className="final-cta-actions">
             <input className="final-cta-input" type="email" name="email" placeholder="Work email" aria-label="Work email" />

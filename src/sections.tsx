@@ -69,7 +69,7 @@ const pricingOptions = [
   {
     title: "Fixed sprint",
     price: "$5,000",
-    copy: "One automation. 2 days. Clear scope.",
+    copy: "One automation. 48 hours. Clear scope.",
     tag: "Most popular",
     highlight: true,
   },
@@ -78,7 +78,7 @@ const pricingOptions = [
 
 const faq = [
   {
-    q: "How can you do in 2 days what consultants need 6 months for?",
+    q: "How can you do in 48 hours what consultants need 6 months for?",
     a: "We use proven playbooks. It's assembling tested parts, not inventing from scratch. We focus on the 80% that drives impact.",
   },
   {
@@ -86,7 +86,7 @@ const faq = [
     a: "We see patterns. If you're truly unique, we'll tell you on the 30-min call and point you to the right path.",
   },
   {
-    q: "What happens after 2 days?",
+    q: "What happens after 48 hours?",
     a: "The automation is live. We monitor for 30 days and train your team. Most clients book another sprint once they see the ROI.",
   },
   {
@@ -98,8 +98,8 @@ const faq = [
 const metrics = ["400+ builds", "14-20 sprints/month", "Never issued a refund"];
 
 export const CTAButton = ({ small = false }: { small?: boolean }) => (
-  <button className={`cta ${small ? "small" : ""}`} aria-label="Chat with us">
-    Chat with us •
+  <button className={`cta ${small ? "small" : ""}`} aria-label="Book a Call">
+    Book a Call
   </button>
 );
 
@@ -153,18 +153,17 @@ export function Hero() {
     <section className="hero" id="top">
       <p className="eyebrow">AI automation that actually ships</p>
       <h1>
-        2 days.
+        48 hours.
         <br />
         Working system.
         <br />
         Guaranteed results.
       </h1>
       <p className="lead">
-        Traditional consultants take 6 months and deliver PowerPoint. We take 2 days and deliver deployed automations.
+        Traditional consultants take 6 months and deliver PowerPoint. We take 48 hours and deliver deployed automations.
       </p>
       <div className="hero-actions">
         <CTAButton />
-        <p className="hero-subtext">$5K flat or outcome-based pricing</p>
       </div>
       <div className="ticker">
         {metrics.map((item) => (
@@ -177,7 +176,7 @@ export function Hero() {
 
 export function Problem() {
   return (
-    <Section title="You know you need AI automation." label="The Problem" id="problem">
+    <Section title="You've been thinking about AI for months." label="The Problem" id="problem">
       <p className="body-lg text-muted">
         Competitors are automating. Your board is asking. Your team is drowning in repetitive work.
       </p>
@@ -208,7 +207,7 @@ export function Solution() {
         ))}
       </div>
       <div className="note">
-        Working automation. 2 days. Not a strategy doc. Not a pilot plan. A deployed system that saves time or makes money.
+        Working automation. 48 hours. Not a strategy doc. Not a pilot plan. A deployed system that saves time or makes money.
       </div>
     </Section>
   );
@@ -229,7 +228,7 @@ export function Automations() {
               <p className="text-dim">After</p>
               <p>{item.after}</p>
             </div>
-            <p className="time">2 days to deploy</p>
+            <p className="time">48 hours to deploy</p>
           </div>
         ))}
       </div>
@@ -254,7 +253,7 @@ export function Proof() {
 
 const testimonials = [
   {
-    quote: "Deployed a lead qualification system in 2 days that saves us 18 hours per week. ROI paid back in 3 weeks.",
+    quote: "Deployed a lead qualification system in 48 hours that saves us 18 hours per week. ROI paid back in 3 weeks.",
     name: "Sarah Chen",
     role: "COO, B2B SaaS",
   },
@@ -365,14 +364,13 @@ export function Pricing() {
         <li>30-day monitoring</li>
         <li>You own everything. No lock-in.</li>
       </ul>
-      <p className="text-muted">No hidden fees. No monthly charges. No surprises.</p>
     </Section>
   );
 }
 
 export function FAQ() {
   return (
-    <Section title="Questions" className="faq" id="faq" label="FAQ">
+    <Section title="FAQs" className="faq" id="faq" label="FAQ">
       {faq.map((item) => (
         <div className="faq-item" key={item.q}>
           <h4>{item.q}</h4>
