@@ -438,7 +438,29 @@ a {
   margin: 24px 0 32px;
 }
 
+.solutions-section .section-cta {
+  padding-top: 24px;
+}
+
 .section-cta.center {
+  justify-content: center;
+}
+
+.section-cta .cta-inline {
+  align-items: stretch;
+}
+
+.section-cta .cta-inline .cta-input {
+  height: 54px;
+  border-radius: 12px 0 0 12px;
+}
+
+.section-cta .cta-inline .cta-button {
+  height: 54px;
+  padding: 0 28px;
+  border-radius: 0 12px 12px 0;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
 }
 

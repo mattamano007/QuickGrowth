@@ -8,19 +8,19 @@ const solutionSteps = [
     visual: "radar",
   },
   {
-    title: "Build it fast",
+    title: "Build the solution",
     blurb: "We assemble and customize with components we've shipped dozens of times.",
     points: ["Connect to your stack", "Handle edge cases and alerts", "Ship a working draft in hours"],
     visual: "code",
   },
   {
-    title: "Make it live",
+    title: "Ship",
     blurb: "We turn it on, test it, and show your team how to use it.",
     points: ["Production deploy", "Team training session", "Dashboards for visibility"],
     visual: "integration",
   },
   {
-    title: "Make sure it works",
+    title: "Verify it works",
     blurb: "We watch it for 30 days and fix anything that needs fixing.",
     points: ["Monitor impact", "Tweak prompts/flows", "Prove the KPI before handoff"],
     visual: "checklist",
@@ -223,8 +223,7 @@ export default function Home() {
           </div>
 
           <h1 className="hero-title">
-            <span className="line">Every business</span>
-            <span className="line">will automate.</span>
+            <span className="line">Every business will automate.</span>
             <span className="line">The winners are doing it now.</span>
           </h1>
 
@@ -413,9 +412,12 @@ export default function Home() {
             ))}
           </div>
           <div className="section-cta center">
-            <button className="cta-button">
-              <span>Book a Call</span>
-            </button>
+            <div className="cta-inline">
+              <input className="cta-input" type="email" name="solutions-email" placeholder="Work email" aria-label="Work email" />
+              <button className="cta-button">
+                <span>Book a Call</span>
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -487,12 +489,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-
-          <div className="section-cta center">
-            <button className="cta-button">
-              <span>Book a Call</span>
-            </button>
-          </div>
         </div>
       </section>
 
@@ -510,6 +506,14 @@ export default function Home() {
             <div className="milestone-card animate">
               <div className="milestone-number">5-10x</div>
               <p className="milestone-copy">typical ROI in year one with outcome-backed sprints</p>
+            </div>
+          </div>
+          <div className="section-cta center">
+            <div className="cta-inline">
+              <input className="cta-input" type="email" name="process-email" placeholder="Work email" aria-label="Work email" />
+              <button className="cta-button">
+                <span>Book a Call</span>
+              </button>
             </div>
           </div>
         </div>
