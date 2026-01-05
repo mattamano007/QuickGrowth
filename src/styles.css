@@ -1138,61 +1138,10 @@ a {
   min-height: 140px;
 }
 
-.list-mock {
-  display: grid;
-  gap: 8px;
-}
-
-.list-row {
-  display: grid;
-  grid-template-columns: 16px 1fr;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 10px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.04);
-}
-
-.list-row .dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #6366f1, #a855f7);
-}
-
-.list-row .label {
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 14px;
-}
-
 .spinner-text {
   margin: 0;
   color: rgba(255, 255, 255, 0.75);
   font-size: 14px;
-}
-
-.table-mock {
-  display: grid;
-  gap: 10px;
-}
-
-.table-row {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr 0.8fr;
-  gap: 10px;
-  padding: 10px 12px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 14px;
-}
-
-.table-row.header {
-  background: rgba(255, 255, 255, 0.06);
-  color: #fff;
-  font-weight: 700;
 }
 
 .pill {
@@ -1223,24 +1172,47 @@ a {
   border-color: rgba(139, 92, 246, 0.35);
 }
 
-.cards-mock {
-  display: grid;
-  gap: 10px;
+.card-visual.list::before,
+.card-visual.table::before,
+.card-visual.cards::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(0deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    radial-gradient(circle at 18% 22%, rgba(34, 211, 238, 0.18), transparent 45%),
+    radial-gradient(circle at 82% 70%, rgba(99, 102, 241, 0.2), transparent 45%);
+  background-size: 28px 28px, 28px 28px, auto, auto;
+  opacity: 0.55;
+  pointer-events: none;
 }
 
-.card-line {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  padding: 8px 10px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.04);
+.card-visual.list,
+.card-visual.table,
+.card-visual.cards {
+  background: linear-gradient(180deg, #0f101f 0%, #0b0c17 100%);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04), 0 16px 28px rgba(0, 0, 0, 0.35);
 }
 
-.card-line.wide {
-  justify-content: space-between;
+.card-visual.list::after,
+.card-visual.table::after,
+.card-visual.cards::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  pointer-events: none;
 }
+
+.card-visual > * {
+  position: relative;
+  z-index: 1;
+}
+
 
 .solution-text h3 {
   margin: 6px 0 8px;

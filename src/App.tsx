@@ -195,7 +195,7 @@ export default function Home() {
           <div className="nav-links">
             <a href="#pricing">Pricing</a>
             <a href="#faq">FAQ</a>
-            <input className="cta-input" type="email" name="nav-email" placeholder="Work email" aria-label="Work email" />
+            <input className="cta-input" type="email" name="nav-email" placeholder="you@company.com" aria-label="Work email" />
             <button className="cta-button small">
               <span>Book a Call</span>
             </button>
@@ -233,7 +233,7 @@ export default function Home() {
 
           <div className="hero-cta">
             <div className="cta-inline">
-              <input className="cta-input" type="email" name="hero-email" placeholder="Work email" aria-label="Work email" />
+              <input className="cta-input" type="email" name="hero-email" placeholder="you@company.com" aria-label="Work email" />
               <button className="cta-button">
                 <span>Book a Call</span>
               </button>
@@ -244,6 +244,25 @@ export default function Home() {
         <div className="scroll-indicator">
           <div className="scroll-line" />
           <span className="scroll-text">Scroll</span>
+        </div>
+      </section>
+
+      <section className="milestone-section">
+        <div className="section-shell">
+          <div className="milestone-grid">
+            <div className="milestone-card animate">
+              <div className="milestone-number">48</div>
+              <p className="milestone-copy">hours to build and ship a working automation</p>
+            </div>
+            <div className="milestone-card animate">
+              <div className="milestone-number">400+</div>
+              <p className="milestone-copy">automations deployed across SaaS, e-comm, agencies, pro services</p>
+            </div>
+            <div className="milestone-card animate">
+              <div className="milestone-number">5-10x</div>
+              <p className="milestone-copy">typical ROI in year one with outcome-backed sprints</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -318,33 +337,11 @@ export default function Home() {
             {solutions.map((item, idx) => (
               <div className={`solution-row ${idx % 2 === 1 ? "reverse" : ""}`} key={item.title}>
                 <div className="solution-card animate">
-                  <div className="card-header">
-                    <span className="chip">Automation</span>
-                    <span className="chip ghost">Live</span>
-                  </div>
                   <div className={`card-visual ${item.visual}`}>
                     {item.visual === "list" && (
-                      <div className="list-mock">
-                        <div className="list-row">
-                          <span className="dot" />
-                          <span className="label">System check</span>
-                        </div>
-                        <div className="list-row">
-                          <span className="dot" />
-                          <span className="label">Process check</span>
-                        </div>
-                        <div className="list-row">
-                          <span className="dot" />
-                          <span className="label">Speed check</span>
-                        </div>
-                        <div className="list-row">
-                          <span className="dot" />
-                          <span className="label">Manual work</span>
-                        </div>
-                        <div className="list-row">
-                          <span className="dot" />
-                          <span className="label">Repetitive task</span>
-                        </div>
+                      <div className="image-wrap">
+                        <img src="/support-sales.svg" alt="Sales automation lead flow" className="solution-gif" />
+                        <p className="spinner-text">Leads flow from source to booked.</p>
                       </div>
                     )}
                     {item.visual === "support" && (
@@ -354,43 +351,15 @@ export default function Home() {
                       </div>
                     )}
                     {item.visual === "table" && (
-                      <div className="table-mock">
-                        <div className="table-row header">
-                          <span>Accounts</span>
-                          <span>Status</span>
-                          <span>Owner</span>
-                        </div>
-                        <div className="table-row">
-                          <span>NexaCorp</span>
-                          <span className="pill green">Ready</span>
-                          <span>Sarah</span>
-                        </div>
-                        <div className="table-row">
-                          <span>GrowthPeak</span>
-                          <span className="pill amber">Review</span>
-                          <span>Alex</span>
-                        </div>
-                        <div className="table-row">
-                          <span>TechFlow</span>
-                          <span className="pill purple">Enriched</span>
-                          <span>Jamie</span>
-                        </div>
+                      <div className="image-wrap">
+                        <img src="/support-growth.svg" alt="Sales growth pipeline" className="solution-gif" />
+                        <p className="spinner-text">Momentum builds through each stage.</p>
                       </div>
                     )}
                     {item.visual === "cards" && (
-                      <div className="cards-mock">
-                        <div className="card-line">
-                          <span className="pill purple">Score</span>
-                          <span className="pill ghost">Route</span>
-                        </div>
-                        <div className="card-line wide">
-                          <span className="label">Data check</span>
-                          <span className="pill green">Pass</span>
-                        </div>
-                        <div className="card-line wide">
-                          <span className="label">Notify owner</span>
-                          <span className="pill amber">Queued</span>
-                        </div>
+                      <div className="image-wrap">
+                        <img src="/support-data.svg" alt="Data automation cleanup flow" className="solution-gif" />
+                        <p className="spinner-text">Messy data in, clean systems out.</p>
                       </div>
                     )}
                   </div>
@@ -400,20 +369,13 @@ export default function Home() {
                   <div className="section-label pill tiny">Use case</div>
                   <h3>{item.title}</h3>
                   <p>{item.blurb}</p>
-                  <div className="solution-tags">
-                    {item.tags.map((tag) => (
-                      <span className="solution-tag" key={tag}>
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
                 </div>
               </div>
             ))}
           </div>
           <div className="section-cta center">
             <div className="cta-inline">
-              <input className="cta-input" type="email" name="solutions-email" placeholder="Work email" aria-label="Work email" />
+              <input className="cta-input" type="email" name="solutions-email" placeholder="you@company.com" aria-label="Work email" />
               <button className="cta-button">
                 <span>Book a Call</span>
               </button>
@@ -492,33 +454,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="milestone-section">
-        <div className="section-shell">
-          <div className="milestone-grid">
-            <div className="milestone-card animate">
-              <div className="milestone-number">48</div>
-              <p className="milestone-copy">hours to build and ship a working automation</p>
-            </div>
-            <div className="milestone-card animate">
-              <div className="milestone-number">400+</div>
-              <p className="milestone-copy">automations deployed across SaaS, e-comm, agencies, pro services</p>
-            </div>
-            <div className="milestone-card animate">
-              <div className="milestone-number">5-10x</div>
-              <p className="milestone-copy">typical ROI in year one with outcome-backed sprints</p>
-            </div>
-          </div>
-          <div className="section-cta center">
-            <div className="cta-inline">
-              <input className="cta-input" type="email" name="process-email" placeholder="Work email" aria-label="Work email" />
-              <button className="cta-button">
-                <span>Book a Call</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="testimonials-section" id="testimonials">
         <div className="section-shell">
           <h2 className="section-title">Why businesses love our AI automation.</h2>
@@ -585,7 +520,7 @@ export default function Home() {
           </div>
           <div className="section-cta center">
             <div className="cta-inline">
-              <input className="cta-input" type="email" name="pricing-email" placeholder="Work email" aria-label="Work email" />
+              <input className="cta-input" type="email" name="pricing-email" placeholder="you@company.com" aria-label="Work email" />
               <button className="cta-button">
                 <span>Book a Call</span>
               </button>
@@ -628,7 +563,7 @@ export default function Home() {
           <h2 className="section-title">Let AI do the work so you can scale faster</h2>
           <p className="section-subtitle final-cta-subtitle">Book a Call Today and Start Automating</p>
           <div className="final-cta-actions">
-            <input className="final-cta-input" type="email" name="email" placeholder="Work email" aria-label="Work email" />
+            <input className="final-cta-input" type="email" name="email" placeholder="you@company.com" aria-label="Work email" />
             <button className="cta-button final-cta-button">
               <span>Book a free call</span>
               <span aria-hidden="true">↗</span>
